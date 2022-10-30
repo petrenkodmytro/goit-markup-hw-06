@@ -201,8 +201,8 @@ button {
   color: var(--secondary-bg-color);
   background-color: var(--accent-color);
   border-radius: 4px;
-  
-  transition:  background-color var(--transition-duration) var(--transition-timing-function), box-shadow var(--transition-duration) var(--transition-timing-function);
+
+  transition: background-color var(--transition-duration) var(--transition-timing-function), box-shadow var(--transition-duration) var(--transition-timing-function);
 }
 
 .btn-servise:hover,
@@ -299,8 +299,8 @@ button {
   justify-content: center;
   align-items: center;
   font-weight: 700;
-    line-height: 1.14;
-    text-transform: uppercase;
+  line-height: 1.14;
+  text-transform: uppercase;
   color: var(--secondary-bg-color);
   background: rgba(47, 48, 58, 0.8);
 }
@@ -367,7 +367,7 @@ button {
   border-radius: 50%;
   color: var(--icon);
 
-  transition:  background-color var(--transition-duration) var(--transition-timing-function), color var(--transition-duration) var(--transition-timing-function);
+  transition: background-color var(--transition-duration) var(--transition-timing-function), color var(--transition-duration) var(--transition-timing-function);
 }
 
 .icon-social {
@@ -409,7 +409,7 @@ button {
   border-radius: 4px;
   color: var(--icon);
 
-  transition:  color var(--transition-duration) var(--transition-timing-function), border-color var(--transition-duration) var(--transition-timing-function);
+  transition: color var(--transition-duration) var(--transition-timing-function), border-color var(--transition-duration) var(--transition-timing-function);
 }
 
 .clients-list .link:hover,
@@ -455,9 +455,9 @@ button {
   background-color: var(--bg-color-btn-filter);
   border-radius: 4px;
   border: none;
- 
-  transition:  box-shadow var(--transition-duration) var(--transition-timing-function), background-color var(--transition-duration) var(--transition-timing-function), color var(--transition-duration) var(--transition-timing-function);
-  
+
+  transition: box-shadow var(--transition-duration) var(--transition-timing-function), background-color var(--transition-duration) var(--transition-timing-function),
+    color var(--transition-duration) var(--transition-timing-function);
 }
 
 .btn-filter:hover,
@@ -481,7 +481,7 @@ button {
 
 .cads-list-link {
   display: block;
-  transition:  box-shadow var(--transition-duration) var(--transition-timing-function);
+  transition: box-shadow var(--transition-duration) var(--transition-timing-function);
 }
 
 .cads-list-link:hover,
@@ -592,7 +592,8 @@ button {
   margin-left: 70px;
 }
 
-.join-text {
+.join-text,
+.subscribe-text {
   margin-bottom: 20px;
   font-weight: 700;
   font-size: 14px;
@@ -613,6 +614,56 @@ button {
 .join .link:hover,
 .join .link:focus {
   background-color: var(--accent-color);
+}
+
+.subscribe {
+  margin-left: 93px;
+}
+
+.subscribe-wrapper {
+  display: flex;
+  gap: 12px;
+  height: 50px;
+}
+
+.input-subscribe {
+  min-width: 358px;
+  padding: 16px 12px;
+  background-color: inherit;
+  color: var(--footer-contact-item);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+}
+
+/* .input-subscribe:not(:placeholder-shown) {
+border: 1px solid var(--accent-color);
+} */
+
+.btn-subscribe {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  min-width: 200px;
+
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  align-content: center;
+  text-align: center;
+  letter-spacing: 0.06em;
+  border-radius: 4px;
+  color: var(--secondary-bg-color);
+  background-color: var(--accent-color);
+
+  transition: background-color var(--transition-duration) var(--transition-timing-function), box-shadow var(--transition-duration) var(--transition-timing-function);
+}
+
+.btn-subscribe:hover,
+.btn-subscribe:focus {
+  background-color: var(--btn-service-hover);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
 /* ----------backdrop---------- */
@@ -683,7 +734,7 @@ button {
 .footer-contact-item:hover,
 .footer-contact-item:focus {
   color: var(--accent-color);
- }
+}
 
 .current {
   position: relative;
