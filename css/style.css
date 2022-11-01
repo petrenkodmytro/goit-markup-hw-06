@@ -717,12 +717,12 @@ border: 1px solid var(--accent-color);
   border-radius: 50%;
   background: transparent;
   border: 1px solid rgba(0, 0, 0, 0.1);
-  transition: border-color var(--transition-duration) var(--transition-timing-function);
+  transition: fill var(--transition-duration) var(--transition-timing-function);
 }
 
-.btn-close:hover,
-.btn-close:focus {
-  border-color: var(--accent-color);
+.btn-close:hover .icon-close,
+.btn-close:focus .icon-close {
+  fill: var(--accent-color);
 }
 
 /* ----------form---------- */
@@ -742,7 +742,6 @@ border: 1px solid var(--accent-color);
 
 .input-wrapper:focus-within > .form-input {
   border: 1px solid var(--accent-color);
-  outline: none;
 }
 
 .input-wrapper:focus-within > .form-icon {
@@ -767,12 +766,15 @@ border: 1px solid var(--accent-color);
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   padding-left: 42px;
+  outline: none;
+  transition: border var(--transition-duration) var(--transition-timing-function);
 }
 .form-icon {
   position: absolute;
   top: 50%;
   left: 12px;
   transform: translateY(-50%);
+  transition: fill var(--transition-duration) var(--transition-timing-function);
 }
 
 .form-input.comment {
@@ -782,10 +784,12 @@ border: 1px solid var(--accent-color);
 }
 
 .label-checkbox {
+  position: relative;
   display: flex;
   align-items: center;
   margin-top: 20px;
   margin-bottom: 30px;
+  padding-left: 12px;
   font-family: "Roboto";
   font-style: normal;
   font-weight: 400;
@@ -795,6 +799,7 @@ border: 1px solid var(--accent-color);
 }
 
 .label-checkbox > a {
+  margin-left: 5px;
   color: var(--accent-color);
 }
 
@@ -804,7 +809,7 @@ border: 1px solid var(--accent-color);
   appearance: none;
   position: absolute; */
 
-  /* position: absolute;
+  position: absolute;
   white-space: nowrap;
   width: 1px;
   height: 1px;
@@ -813,7 +818,24 @@ border: 1px solid var(--accent-color);
   padding: 0;
   clip: rect(0 0 0 0);
   clip-path: inset(50%);
-  margin: -1px; */
+  margin: -1px;
+}
+
+.form-icon-check {
+  margin-right: 7px;
+  border: 2px solid var(--brand-color);
+  border-radius: 2px;
+  background-color: transparent;
+  transition: background-color var(--transition-duration) var(--transition-timing-function), border-color var(--transition-duration) var(--transition-timing-function);
+}
+
+.input-checkbox:checked ~ .form-icon-check {
+  background-color: var(--accent-color);
+  border-color: transparent;
+}
+
+.input-checkbox:focus ~ .form-icon-check {
+  border-color: var(--accent-color);
 }
 
 .btn-send {
