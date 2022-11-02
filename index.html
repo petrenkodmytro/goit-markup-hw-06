@@ -372,16 +372,14 @@
         </div>
         <div class="subscribe">
           <p class="subscribe-text">Підпишіться на розсилку</p>
-          <form action="" autocomplete="off">
-            <div class="subscribe-wrapper">
-              <input class="input-subscribe" type="email" name="mail" placeholder="E-mail" />
-              <button class="btn-subscribe" type="submit">
-                Підписатися
-                <svg class="icon-social" width="24" height="24">
-                  <use href="./images/sprite.svg#icon-send"></use>
-                </svg>
-              </button>
-            </div>
+          <form class="subscribe-wrapper" action="" autocomplete="off">
+            <input class="input-subscribe" type="email" name="mail" placeholder="E-mail" required />
+            <button class="btn-subscribe" type="submit">
+              Підписатися
+              <svg class="icon-social" width="24" height="24">
+                <use href="./images/sprite.svg#icon-send"></use>
+              </svg>
+            </button>
           </form>
         </div>
       </div>
@@ -398,7 +396,7 @@
           <div class="form-field">
             <label class="form-label" for="name">Ім'я</label>
             <div class="input-wrapper">
-              <input class="form-input" type="text" name="name" id="name" placeholder=" " />
+              <input class="form-input" type="text" name="name" id="name" placeholder=" " required />
               <svg class="form-icon" width="18" height="18">
                 <use href="./images/sprite.svg#form-person"></use>
               </svg>
@@ -407,7 +405,7 @@
           <div class="form-field">
             <label class="form-label" for="tel">Телефон</label>
             <div class="input-wrapper">
-              <input class="form-input" type="tel" name="tel" id="tel" placeholder=" " />
+              <input class="form-input" type="tel" name="tel" id="tel" placeholder=" " required />
               <svg class="form-icon" width="18" height="18">
                 <use href="./images/sprite.svg#form-phone"></use>
               </svg>
@@ -416,20 +414,20 @@
           <div class="form-field">
             <label class="form-label" for="mail">Пошта</label>
             <div class="input-wrapper">
-              <input class="form-input" type="email" name="mail" id="mail" placeholder=" " />
+              <input class="form-input" type="email" name="mail" id="mail" placeholder=" " required />
               <svg class="form-icon" width="18" height="18">
                 <use href="./images/sprite.svg#form-email"></use>
               </svg>
             </div>
           </div>
-          <div class="form-field">
+          <div class="form-textarea">
             <label class="form-label" for="comment">Коментар</label>
             <div class="input-wrapper">
               <textarea class="form-input comment" name="comment" id="comment" cols="30" rows="10" placeholder="Введіть текст"></textarea>
             </div>
           </div>
           <label class="label-checkbox">
-            <input class="input-checkbox" type="checkbox" />
+            <input class="input-checkbox" type="checkbox" required />
             <svg class="form-icon-check" width="16" height="16">
               <use href="./images/sprite.svg#icon-check"></use>
             </svg>
